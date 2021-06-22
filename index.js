@@ -22,16 +22,16 @@ app.use(express.urlencoded({ extended: false }));
 pool.connect((err, client, release) => {
     if (err) {
         return console.error(
-            'Error acquiring client', err.stack)
+            'Error acquiring client', err.stack);
     }
     client.query('SELECT NOW()', (err, result) => {
-        release()
+        release();
         if (err) {
             return console.error(
-                'Error executing query', err.stack)
+                'Error executing query', err.stack);
         }
-        console.log("Connected to Database !")
-    })
+        console.log("Connected to Database !");
+    });
 });
 
 
@@ -41,11 +41,11 @@ app.get('/testdata', (req, res, next) => {
         .then(testData => {
             console.log(testData);
             res.send(testData.rows);
-        })
+        });
 });
 
 
 const server = app.listen(3000, function () {
-    let host = server.address().address
-    let port = server.address().port
+    let host = server.address().address;
+    let port = server.address().port;
 });
