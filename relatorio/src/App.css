@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  background-color: #99b4ff;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-search{
+  position: absolute;
+  top:15vh;
+  left: 20vw;
+  color: black;
+}
+
+label{
+  padding: 1rem;
+}
