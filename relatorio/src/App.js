@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import * as RB from "react-bootstrap";
+import Show from './components/tabs';
+
 
 function App() {
   return (
@@ -20,20 +22,15 @@ function App() {
       <header className="App-header">
         <div className="App-search">
 
-          <div classname="seleção">
-            <label for="Seleção">Escolha o tipo de pesquisa: </label>
-            <RB.ButtonGroup size="lg" aria-label="Seleção">
-              <RB.Button variant="secondary" value = "select-aerodromo">Aeródromo</RB.Button>
-              <RB.Button variant="secondary" value = "select-metar">Metar</RB.Button>
-              <RB.Button variant="secondary" value = "select-taf">Taf</RB.Button>
-              <RB.Button variant="secondary" value = "select-tsc">Tsc</RB.Button>
-            </RB.ButtonGroup>
+          <div className="seleção">
+            <Show></Show>
           </div>
+          
 
-          <div classname="select-aerodromo">
+          <div className="select-aerodromo">
             <RB.Form>
-              <RB.Form.Group classname="Ordenar-aero" controlId="Ordenar-aero">
-                <label for="select-aero">Ordenar por</label>
+              <RB.Form.Group className="Ordenar-aero" controlId="Ordenar-aero">
+                <label>Ordenar por</label>
                 <select id="select-aero">
                   <option value="aero-cres">Crescente</option>
                   <option value="aero-decr">Decrescente</option>
@@ -43,10 +40,10 @@ function App() {
             </RB.Form>
           </div>
 
-          <div classname="select-metar">
+          <div className="select-metar">
             <RB.Form>
-              <RB.Form.Group classname="Ordenar-metar" controlId="Ordenar-metar">
-                <label for="select-metar">Ordenar por</label>
+              <RB.Form.Group className="Ordenar-metar" controlId="Ordenar-metar">
+                <label>Ordenar por</label>
                 <select id="select-metar">
                   <option value="cod-met">Código</option>
                   <option value="novo">Data mais recente</option>
@@ -57,10 +54,10 @@ function App() {
             </RB.Form>
           </div>
 
-          <div classname="select-taf">
+          <div className="select-taf">
             <RB.Form>
-              <RB.Form.Group classname="Ordenar-taf" controlId="Ordenar-taf">
-                <label for="select-taf">Ordenar por</label>
+              <RB.Form.Group className="Ordenar-taf" controlId="Ordenar-taf">
+                <label>Ordenar por</label>
                 <select id="select-taf">
                   <option value="cod-taf">Código</option>
                   <option value="novo-taf">Data mais recente</option>
@@ -71,10 +68,10 @@ function App() {
             </RB.Form>
           </div>
 
-          <div classname="select-tsc">
+          <div className="select-tsc">
             <RB.Form>
-              <RB.Form.Group classname="Ordenar-tsc" controlId="Ordenar-tsc">
-                <label for="select-tsc">Ordenar tipo por</label>
+              <RB.Form.Group className="Ordenar-tsc" controlId="Ordenar-tsc">
+                <label>Ordenar tipo por</label>
                 <select id="select-tsc">
                   <option value="tsc-cres">Crescente</option>
                   <option value="tsc-descres">Decrescente</option>
